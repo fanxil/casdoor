@@ -31,6 +31,14 @@ import (
 	"github.com/casdoor/casdoor/util"
 )
 
+type Response struct {
+	Code  int         `json:"code"`
+	Msg   string      `json:"msg"`
+	Data  any         `json:"data"`
+	Data2 interface{} `json:"data_2"`
+	Error object.User `json:"error"`
+}
+
 func main() {
 	createDatabase := flag.Bool("createDatabase", false, "true if you need Casdoor to create database")
 	flag.Parse()
